@@ -5,31 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="image/favicon.png">
     <title>Ignite 4.0</title>
 </head>
 <body>
     <header>
         <a href="#" class="logo">
-            <img src="image/chotu logo.png" alt="logo">
+            <img src="image/small-logo.png" alt="logo">
         </a>
         <ul>
+            <li>
+                <div class="music">
+                    <img src="image/PlayBg.png" alt="playBg" class="icon" style="z-index: 0;" id="bg">
+                    <img src="image/Play.png" alt="play" class="icon" style="z-index: 1;" id="play">
+                </div>
+            </li>
             <li><a href="#">About Us</a></li>
             <li><a href="#">Events</a></li>
             <li><a href="#">Sponsors</a></li>
             <li><a href="#">Contact Us</a></li>
         </ul>
     </header>
+    <audio id="themeSong">
+        <source src="Hedwig's Theme.mp3" type="audio/mp3">
+    </audio>
+    
     <section>
-        <img src="image/Group 2322.png" alt="stars" id="stars" class="blink">
+        <img src="image/stars.png" alt="stars" id="stars" class="blink">
         <!-- <div class="stars" id="stars"></div>
-        <div class="twinkling"></div> -->
-        <div class="clouds"></div>
-        <img src="image/cloud.png" alt="clouds" id="clouds">
-        <img src="image/Pahad.png" alt="pahad" id="pahad">
-        <img src="image/aage wale pahad.png" alt="bgMountains" id="bgMountains">
-        <img src="image/Ignite Central.png" alt="central" id="ignite">
-        <img src="image/ped.png" alt="ped" id="ped">
-        <!-- <a href="#" id="btn">Register</a> -->
+            <div class="twinkling"></div> -->
+            <div class="clouds"></div>
+            <!-- <img src="image/cloud.png" alt="clouds" id="clouds"> -->
+            <img src="image/Pahad.png" alt="pahad" id="pahad">
+            <img src="image/aage wale pahad.png" alt="bgMountains" id="bgMountains">
+            <img src="image/MiddleLogo 1.png" alt="central" id="ignite">
+            <img src="image/ped.png" alt="ped" id="ped">
+            <a href="#" id="btn">Register</a>
+    </section>
+    <section class="lake">
+        <img src="image/lake.png" alt="lake" id="lake" class="lake">
     </section>
     <div id="aboutUs" class="aboutUse">
         <h1>About Us!</h1>
@@ -60,15 +74,28 @@
         window.addEventListener('scroll', function() {
             let value = window.scrollY;
             stars.style.left = value + 'px';
-            // clouds.style.left = value + 'px';
-            ignite.style.marginTop = value * 1.5 + 'px';
+            ignite.style.marginTop = value * -1.5 + 'px';
             btn.style.marginTop = value * 1.5 + 'px';
-            bgMountains.style.top = value * 0 + 'px';
-            pahad.style.top = value * 0 + 'px';
+            bgMountains.style.top = value * 1 + 'px';
+            pahad.style.top = value * 1 + 'px';
             ped.style.top = value * 0 + 'px';
             header.style.top = value + 'px';
         })
 
+        var mySong = document.getElementById("themeSong");
+        var icon = document.getElementById("play");
+
+        icon.onclick = function() {
+           icon.onclick = function() {
+               if( mySong.paused) {
+                    mySong.play();
+                    icon.src = "image/Pause.png";
+               } else {
+                   mySong.pause();
+                   icon.src = "image/Play.png";
+               }
+           }
+        }
     </script>
 </body>
 </html>
