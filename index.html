@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Ignite 4.0</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">
+            <img src="image/chotu logo.png" alt="logo">
+        </a>
+        <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Sponsors</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="image/Group 2322.png" alt="stars" id="stars" class="blink">
+        <!-- <div class="stars" id="stars"></div>
+        <div class="twinkling"></div> -->
+        <div class="clouds"></div>
+        <img src="image/cloud.png" alt="clouds" id="clouds">
+        <img src="image/Pahad.png" alt="pahad" id="pahad">
+        <img src="image/aage wale pahad.png" alt="bgMountains" id="bgMountains">
+        <img src="image/Ignite Central.png" alt="central" id="ignite">
+        <img src="image/ped.png" alt="ped" id="ped">
+        <!-- <a href="#" id="btn">Register</a> -->
+    </section>
+    <div id="aboutUs" class="aboutUse">
+        <h1>About Us!</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit ad eveniet illo minus officiis reprehenderit! Saepe doloribus dolores, obcaecati sequi animi facere vitae optio veniam nulla nobis molestias dolor eaque?
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. At repellat totam ex eum ipsum similique adipisci! Error quos quaerat quae totam quasi tenetur necessitatibus, neque libero ratione deleniti at suscipit.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam eaque facilis ratione, eum reprehenderit voluptatem quibusdam voluptates odit enim blanditiis placeat excepturi, tempora dolore molestias sit autem voluptatum rem neque modi. Iste.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit ad eveniet illo minus officiis reprehenderit! Saepe doloribus dolores, obcaecati sequi animi facere vitae optio veniam nulla nobis molestias dolor eaque?
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. At repellat totam ex eum ipsum similique adipisci! Error quos quaerat quae totam quasi tenetur necessitatibus, neque libero ratione deleniti at suscipit.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam eaque facilis ratione, eum reprehenderit voluptatem quibusdam voluptates odit enim blanditiis placeat excepturi, tempora dolore molestias sit autem voluptatum rem neque modi. Iste.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit ad eveniet illo minus officiis reprehenderit! Saepe doloribus dolores, obcaecati sequi animi facere vitae optio veniam nulla nobis molestias dolor eaque?
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. At repellat totam ex eum ipsum similique adipisci! Error quos quaerat quae totam quasi tenetur necessitatibus, neque libero ratione deleniti at suscipit.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam eaque facilis ratione, eum reprehenderit voluptatem quibusdam voluptates odit enim blanditiis placeat excepturi, tempora dolore molestias sit autem voluptatum rem neque modi. Iste.
+        </p>
+    </div>
+
+    <script>
+        let stars = document.getElementById('stars');
+        let clouds = document.getElementById('clouds');
+        let pahad = document.getElementById('pahad');
+        let bgMountains = document.getElementById('bgMountains');
+        let ped = document.getElementById('ped');
+        let btn = document.getElementById('btn');
+        let ignite = document.getElementById('ignite');
+        let about = document.getElementById('aboutUs');
+        let header = document.querySelector('header');
+
+        window.addEventListener('scroll', function() {
+            let value = window.scrollY;
+            stars.style.left = value + 'px';
+            // clouds.style.left = value + 'px';
+            ignite.style.marginTop = value * 1.5 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px';
+            bgMountains.style.top = value * 0 + 'px';
+            pahad.style.top = value * 0 + 'px';
+            ped.style.top = value * 0 + 'px';
+            header.style.top = value + 'px';
+        })
+
+    </script>
+</body>
+</html>
