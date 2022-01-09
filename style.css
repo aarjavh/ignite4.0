@@ -115,7 +115,6 @@ section img {
 }
 section img#stars {
     width: 2000px;
-    /* animation: 1s linear 0.25s 1 slideInFromLeft; */
 }
 .blink {
     animation: blinker 1s linear infinite;
@@ -179,7 +178,6 @@ section img#lake {
     padding: 8px 30px;
     margin-right: 100px;
     margin-top: 30px;
-    /* margin-bottom: 160px; */
     border-radius: 40px;
     background: #fff;
     color: #2b1055;
@@ -201,23 +199,6 @@ section img#lake {
     font-size: 1.2em;
     color: #fff;
 }
-
-/* @keyframes move-twink-back {
-    from {background-position:0 0;}
-    to {background-position:-10000px 5000px;}
-}
-@-webkit-keyframes move-twink-back {
-    from {background-position:0 0;}
-    to {background-position:-10000px 5000px;}
-}
-@-moz-keyframes move-twink-back {
-    from {background-position:0 0;}
-    to {background-position:-10000px 5000px;}
-}
-@-ms-keyframes move-twink-back {
-    from {background-position:0 0;}
-    to {background-position:-10000px 5000px;}
-} */
 
 @keyframes move-clouds-back {
     from {background-position:0 0;}
@@ -247,22 +228,6 @@ section img#lake {
   display:block;
   opacity: 75%;
 }
-
-/* .stars {
-  background: black url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
-  z-index:0;
-}
-
-.twinkling{
-  background:transparent url(http://www.script-tutorials.com/demos/360/images/twinkling.png) repeat top center;
-  z-index:0;
-
-  -moz-animation:move-twink-back 200s linear infinite;
-  -ms-animation:move-twink-back 200s linear infinite;
-  -o-animation:move-twink-back 200s linear infinite;
-  -webkit-animation:move-twink-back 200s linear infinite;
-  animation:move-twink-back 200s linear infinite;
-}  */
 
 .clouds{
     background:transparent url(http://www.script-tutorials.com/demos/360/images/clouds3.png) repeat top center;
