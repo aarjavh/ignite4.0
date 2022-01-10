@@ -151,7 +151,7 @@ section img#ped {
     /* animation: 2s linear 0s 1 slideInFromBottom; */
     z-index: 12;
 }
-section img#lake {
+#lake {
     top: 0;
     left: 0;
     width: 100%;
@@ -159,7 +159,7 @@ section img#lake {
     pointer-events: none;
 }
 .lake {
-    height: 30vh;
+    height: 10vh;
 }
 .lake::before {
     content: '';
