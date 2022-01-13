@@ -5,23 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="image/favicon.png">
+    <link rel="icon" type="image/x-icon" href="favicon.png">
     <title>Ignite 4.0</title>
 </head>
 <body>
     <header>
         <a href="#" class="logo">
-            <img src="image/small-logo.png" alt="logo">
+            <span id="moon"></span>
         </a>
         <ul>
-            <li>
-                <div class="music">
-                    <img src="image/PlayBg.png" alt="playBg" class="icon" style="z-index: 0;" id="bg">
-                    <img src="image/Play.png" alt="play" class="icon" style="z-index: 1;" id="play">
-                </div>
-            </li>
             <li><a href="#">About Us</a></li>
-            <li><a href="#">Events</a></li>
+            <li><a href="Events Page/events.html">Events</a></li>
             <li><a href="#">Sponsors</a></li>
             <li><a href="#">Contact Us</a></li>
         </ul>
@@ -30,70 +24,71 @@
         <source src="Hedwig's Theme.mp3" type="audio/mp3">
     </audio>
     
-    <section class="scene">
-        <img src="image/stars.png" alt="stars" id="stars" class="blink">
-        <div class="clouds"></div>
-        <!-- <img src="image/cloud.png" alt="clouds" id="clouds"> -->
-        <img src="image/Pahad.png" alt="pahad" id="pahad">
-        <img src="image/aage wale pahad.png" alt="bgMountains" id="bgMountains">
-        <img src="image/MiddleLogo 1.png" alt="central" id="ignite">
-        <img src="image/ped.png" alt="ped" id="ped">
+    <section id="scene">
+        <img src="stars.png" alt="stars" id="stars" class="blink stars">
+        <!-- <div class="clouds"></div> -->
+        <img src="SVG Image/FrontMountains.svg" alt="frontMountain" id="frontMountain">
+        <img src="SVG Image/Violet Mountains.svg" alt="backMountain" id="backMountain">
+        <img src="SVG Image/Light Trees.svg" alt="lightTrees" id="lightTrees">
+        <img src="SVG Image/Dark Trees.svg" alt="darkTrees" id="darkTrees">
+        <img src="SVG Image/Ignite Central.svg" alt="central" id="ignite">
         <a href="#" id="btn">Register</a>
+        <img src="SVG Image/Base svg.svg" alt="base" id="base" class="base">
     </section>
-    <section class="lake">
-        <img src="image/Lake.png" alt="lake" id="lake">
+    <section id="aboutUs" class="aboutUs">
+        <img src="stars.png" alt="stars" id="stars" class="blink stars">
+        <img src="SVG Image/Base svg.svg" alt="base" id="base2" class="base">
+        <!-- <h1>About Us!</h1> -->
+        <!-- <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit ad eveniet illo minus officiis reprehenderit! Saepe doloribus dolores, obcaecati sequi animi facere vitae optio veniam nulla nobis molestias dolor eaque?
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. At repellat totam ex eum ipsum similique adipisci! Error quos quaerat quae totam quasi tenetur necessitatibus, neque libero ratione deleniti at suscipit.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam eaque facilis ratione, eum reprehenderit voluptatem quibusdam voluptates odit enim blanditiis placeat excepturi, tempora dolore molestias sit autem voluptatum rem neque modi. Iste.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit ad eveniet illo minus officiis reprehenderit! Saepe doloribus dolores, obcaecati sequi animi facere vitae optio veniam nulla nobis molestias dolor eaque?.
+        </p> -->
+        
     </section>
-    <div id="aboutUs" class="aboutUse">
-        <h1>About Us!</h1>
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit ad eveniet illo minus officiis reprehenderit! Saepe doloribus dolores, obcaecati sequi animi facere vitae optio veniam nulla nobis molestias dolor eaque?
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. At repellat totam ex eum ipsum similique adipisci! Error quos quaerat quae totam quasi tenetur necessitatibus, neque libero ratione deleniti at suscipit.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam eaque facilis ratione, eum reprehenderit voluptatem quibusdam voluptates odit enim blanditiis placeat excepturi, tempora dolore molestias sit autem voluptatum rem neque modi. Iste.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit ad eveniet illo minus officiis reprehenderit! Saepe doloribus dolores, obcaecati sequi animi facere vitae optio veniam nulla nobis molestias dolor eaque?
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. At repellat totam ex eum ipsum similique adipisci! Error quos quaerat quae totam quasi tenetur necessitatibus, neque libero ratione deleniti at suscipit.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam eaque facilis ratione, eum reprehenderit voluptatem quibusdam voluptates odit enim blanditiis placeat excepturi, tempora dolore molestias sit autem voluptatum rem neque modi. Iste.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit ad eveniet illo minus officiis reprehenderit! Saepe doloribus dolores, obcaecati sequi animi facere vitae optio veniam nulla nobis molestias dolor eaque?
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. At repellat totam ex eum ipsum similique adipisci! Error quos quaerat quae totam quasi tenetur necessitatibus, neque libero ratione deleniti at suscipit.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam eaque facilis ratione, eum reprehenderit voluptatem quibusdam voluptates odit enim blanditiis placeat excepturi, tempora dolore molestias sit autem voluptatum rem neque modi. Iste.
-        </p>
-    </div>
 
     <script>
+        // let stars = document.getElementById('stars');
+        // let clouds = document.getElementById('clouds');
+        // let pahad = document.getElementById('backMountain');
+        // let bgMountains = document.getElementById('bgMountains');
+        // let ped = document.getElementById('ped');
+        // let btn = document.getElementById('btn');
+        // let ignite = document.getElementById('ignite');
+        // let about = document.getElementById('aboutUs');
+        // let moon = document.querySelector('moon');
+
+        // window.addEventListener('scroll', function() {
+        //     let value = window.scrollY;
+        //     stars.style.left = value + 'px';
+        //     ignite.style.marginTop = value * 0 + 'px';
+        //     btn.style.marginTop = value * 1.5 + 'px';
+        //     bgMountains.style.top = value * -1 + 'px';
+        //     pahad.style.top = value * -1 + 'px';
+        //     ped.style.top = value * 0 + 'px';
+        //     moon.style.top = value * 1 + 'px';
+        // })
+
         let stars = document.getElementById('stars');
-        let clouds = document.getElementById('clouds');
-        let pahad = document.getElementById('pahad');
-        let bgMountains = document.getElementById('bgMountains');
-        let ped = document.getElementById('ped');
-        let btn = document.getElementById('btn');
-        let ignite = document.getElementById('ignite');
-        let about = document.getElementById('aboutUs');
-        let header = document.querySelector('header');
+        let moon = document.getElementById('moon');
+        let backMountain = document.getElementById('backMountain');
+        let frontMountain = document.getElementById('frontMountain');
+        let lightTrees = document.getElementById('lightTrees');
+        let darkTrees = document.getElementById('darkTrees');
+        let base = document.getElementById('base2');
 
         window.addEventListener('scroll', function() {
             let value = window.scrollY;
+
             stars.style.left = value + 'px';
-            ignite.style.marginTop = value * -1.5 + 'px';
-            btn.style.marginTop = value * 1.5 + 'px';
-            bgMountains.style.top = value * 1 + 'px';
-            pahad.style.top = value * 1 + 'px';
-            ped.style.top = value * 0 + 'px';
-            header.style.top = value + 'px';
+            backMountain.style.marginTop = value * -0.75 + 'px';
+            frontMountain.style.marginTop = value * -0.5 + 'px';
+            lightTrees.style.marginTop = value * -0.5 + 'px';
+            darkTrees.style.marginTop = value * -0.25 + 'px';
+            moon.style.left = value * -1 + 'px';
+            base.style.marginTop = value * 0.05 + 'px';
         })
-
-        var mySong = document.getElementById("themeSong");
-        var icon = document.getElementById("play");
-
-        icon.onclick = function() {
-           icon.onclick = function() {
-               if( mySong.paused) {
-                    mySong.play();
-                    icon.src = "image/Pause.png";
-               } else {
-                   mySong.pause();
-                   icon.src = "image/Play.png";
-               }
-           }
-        }
     </script>
 </body>
 </html>

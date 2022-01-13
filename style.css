@@ -9,28 +9,12 @@
     box-sizing: border-box;
     font-family: 'gothamBook', sans-serif;
 }
-@keyframes slideInFromTop {
-    0% {
-      transform: translateY(-100%);
-    }
-    100% {
-      transform: translateY(0);
-    }
-}
-@keyframes slideInFromBottom {
-    0% {
-      transform: translateY(200%);
-    }
-    100% {
-      transform: translateY(0%);
-    }
-}
-  
 body {
     min-height: 100vh;
 }
+
+/* Header CSS */
 header {
-    animation: 1s linear 0s 1 slideInFromTop;
     position: absolute;
     top: 0;
     left: 0;
@@ -41,7 +25,6 @@ header {
     align-items: center;
     z-index: 10000;
 }
-
 header ul{
     display: flex;
     justify-content: center;
@@ -63,30 +46,17 @@ header ul li a:hover, header ul li a.active {
     background: #fff;
     color: #2b1055;
 }
-
-.music {
-    position: relative;
-    display: flex;
-    align-items: center;
-}
-.icon {
-    width: 80px;
-    cursor: pointer;
-}
-#play {
-    margin-left: 10px;
-    width: 25px;
-    height: 30px;
-    position: relative;
-}
-#bg {
-    width: 45px;
-    height: 45px;
-    position: absolute;
+#moon {
+    height: 10vh;
+    width: 5.5vw;
+    background-color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+  
 }
 
+/* Section CSS */
 section {
-    background: linear-gradient(#3C0C69, #6825A0, #973093, #8E266F, #3E1144);
     position: relative;
     width: 100%;
     height:100vh;
@@ -96,15 +66,6 @@ section {
     align-items: center;
     overflow: hidden;
 }
-section::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 200px;
-    background: linear-gradient(to top, #120e0e, transparent);
-    z-index: 13;
-}
 section img {
     position: absolute;
     top: 0;
@@ -113,8 +74,11 @@ section img {
     height: 100%;
     pointer-events: none;
 }
-section img#stars {
-    width: 2000px;
+#scene {
+    background: linear-gradient(#3C0C69, #65239C, #462B93);
+}
+img.stars {
+    width: 100vw;
 }
 .blink {
     animation: blinker 1s linear infinite;
@@ -122,84 +86,79 @@ section img#stars {
 @keyframes blinker {  
     50% { opacity: 0; }
 }
-
-section img#clouds {
-    float: right;
-    width: 100%;
-    height: 50%;
-    /* animation: 2s linear 0.5s 1 slideInFromTop; */
-    z-index: 5;
-}
-section img#ignite {
+#scene img#ignite {
     color: #fff;
-    width: 300px;
-    height: 270px;
-    margin-left: 570px;
-    margin-top: 80px;  
-    animation: 2s linear 0s 1 slideInFromTop;
-    z-index: 11;
-}
-section img#pahad {
-    /* animation: 2s linear 0s 1 slideInFromBottom; */
+    width: 26vw;
+    height: 37vh;
+    margin-left: 35%;
+    margin-top: 3%;  
     z-index: 8;
 }
-section img#bgMountains {
-    /* animation: 2s linear 0s 1 slideInFromBottom; */
+#scene img#backMountain {
+    top: 35%;
+    z-index: 9;
+}
+#scene img#frontMountain {
+    top: 10%;
+    z-index: 10;
+}
+#scene img#lightTrees {
+    opacity: 100%;
+    top: 35%;
     z-index: 12;
 }
-section img#ped {
-    /* animation: 2s linear 0s 1 slideInFromBottom; */
+#scene img#darkTrees {
+    opacity: 75%;
+    top: 33%;
     z-index: 12;
 }
-#lake {
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
+img.base {
+    width: 75;
+    top: 33%;
+    z-index: 12;
 }
-.lake {
-    height: 10vh;
-}
-.lake::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 200px;
-    background: linear-gradient(to top, #B157CF, transparent);
-    z-index: 13;
-}
-
-
 #btn {
     position: absolute;
     text-decoration: none;
-    padding: 8px 30px;
-    margin-right: 100px;
-    margin-top: 30px;
+    margin-right: 7%;
+    margin-bottom: 5%;
     border-radius: 40px;
     background: #fff;
     color: #2b1055;
     font-size: 1.5em;
-    z-index: 11;
-    animation: 2s linear 0s 1 slideInFromBottom;
+    z-index: 8;
+    padding: 8px 15px;
+    font-weight: bold;
 }
+#scene::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 15%;
+    background: linear-gradient(to top,#462B93, transparent);
+    z-index: 13;
+}
+
+/* Next About Us section */
 #aboutUs {
-    position: relative;
-    padding: 100px;
-    background: linear-gradient(#B157CF, #6627AE);
+    background: linear-gradient( #462B93, #2E1B64, #3E1144);
 }
 #aboutUs h1 {
     font-size: 3.5em;
-    margin-bottom: 10px;
+    margin-bottom: 5%;
+    margin-right: 15%;
     color: #fff;
 }
 #aboutUs p {
     font-size: 1.2em;
     color: #fff;
 }
+#base2{
+    top: 30%;
+}
 
+/* Moving CLouds */
 @keyframes move-clouds-back {
     from {background-position:0 0;}
     to {background-position:10000px 0;}
@@ -227,12 +186,9 @@ section img#ped {
   height:100%;
   display:block;
   opacity: 75%;
-}
-
-.clouds{
-    background:transparent url(http://www.script-tutorials.com/demos/360/images/clouds3.png) repeat top center;
-    z-index:10;
-
+  background:transparent url(http://www.script-tutorials.com/demos/360/images/clouds3.png) repeat top center;
+  z-index:7;
+  
   -moz-animation:move-clouds-back 200s linear infinite;
   -ms-animation:move-clouds-back 200s linear infinite;
   -o-animation:move-clouds-back 200s linear infinite;
