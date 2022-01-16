@@ -13,10 +13,10 @@
 <body onload="myFunction()">
     
     <div id="loading"></div>
-    <audio controls autoplay>
-        <source src="Hedwig's Theme.mp3" type="audio/mp3">
-    </audio>
     <div class="first">
+        <!-- <audio controls autoplay style="z-index: 1000;">
+            <source src="Hedwig's Theme.mp3" type="audio/mp3">
+        </audio> -->
         <!-- partial:index.partial.html -->
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 750 500"
             preserveAspectRatio="xMidYMax slice">
@@ -858,7 +858,7 @@
     </div>
     <div class="scrollElement"></div>
     <a href="Events Page/events.html" target="_blank" class="btn btn_works">Event</a>
-    <a href="#" target="_blank" class="btn">Sponsors</a>
+    <a href="#" class="btn" onclick="onMusic()">Sponsors</a>
     
     <!-- partial -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/gsap.min.js'></script>
@@ -882,6 +882,15 @@
         var rectText = document.getElementById('registerText');
         function regtHover() {
             rect.fill = '#fff';
+        }
+
+        var audio = new Audio("Hedwig's Theme.mp3");
+        function onMusic() {
+            if(audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
         }
       </script>
     
