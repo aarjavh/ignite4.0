@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ignite 4.0 | Events</title>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="icon" type="image/x-icon" href="../favicon.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="stars.css">
+  <link rel="stylesheet" href="sstyle.css">
+</head>
+
+<body onload="myFunction()">
+
+  <div id="loading"></div>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <ul class="nav navbar-nav">
+        <li><a id="len1" class="hoverable" href="#">Home</a></li>
+        <li><a id="len2" class="hoverable" href="#">About</a></li>
+        <li><a id="len3" class="hoverable" href="#">Portfolio</a></li>
+        <li><a id="len4" class="hoverable" href="#">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <span id="stars-bg">
+    <div id='stars'></div>
+    <div id='stars2'></div>
+    <div id='stars3'></div>
+  </span>
+
+
+  <img src="event.svg" alt="event" id="title">
+
+  <div id="app" class="ccontainer">
+    <card data-image="https://i.ibb.co/2ndHqXg/Squid-Games.png">
+      <h1 slot="header">Tech-Squid Games</h1>
+      <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+
+      </p>
+      <p slot="content">REGISTER NOW</p>
+    </card>
+    <card data-image="https://m.media-amazon.com/images/I/718nQTkSR4L._SL1100_.jpg">
+      <h1 slot="header">E-Sports</h1>
+      <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    </card>
+    <card
+      data-image="https://us.123rf.com/450wm/albund/albund1705/albund170500080/78448216-un-concepto-futurista-de-deportes-de-una-pelota-de-cricket-iluminado-con-marcas-de-ne%C3%B3n-en-una-etapa.jpg?ver=6">
+      <h1 slot="header">Glow Cricket</h1>
+      <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    </card>
+    <card
+      data-image="https://images.unsplash.com/photo-1479621051492-5a6f9bd9e51a?dpr=2&auto=compress,format&fit=crop&w=1199&h=811&q=80&cs=tinysrgb&crop=">
+      <h1 slot="header">Blind Fold Coding</h1>
+      <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    </card>
+    <card
+      data-image="https://images.unsplash.com/photo-1479621051492-5a6f9bd9e51a?dpr=2&auto=compress,format&fit=crop&w=1199&h=811&q=80&cs=tinysrgb&crop=">
+      <h1 slot="header">Hackathon</h1>
+      <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    </card>
+    <card
+      data-image="https://images.unsplash.com/photo-1479621051492-5a6f9bd9e51a?dpr=2&auto=compress,format&fit=crop&w=1199&h=811&q=80&cs=tinysrgb&crop=">
+      <h1 slot="header">Among Us</h1>
+      <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    </card>
+    <card
+      data-image="https://images.unsplash.com/photo-1479621051492-5a6f9bd9e51a?dpr=2&auto=compress,format&fit=crop&w=1199&h=811&q=80&cs=tinysrgb&crop=">
+      <h1 slot="header">Among Us</h1>
+      <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    </card>
+    <card
+      data-image="https://images.unsplash.com/photo-1479621051492-5a6f9bd9e51a?dpr=2&auto=compress,format&fit=crop&w=1199&h=811&q=80&cs=tinysrgb&crop=">
+      <h1 slot="header">Nerf</h1>
+      <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    </card>
+    <card
+      data-image="https://images.unsplash.com/photo-1479621051492-5a6f9bd9e51a?dpr=2&auto=compress,format&fit=crop&w=1199&h=811&q=80&cs=tinysrgb&crop=">
+      <h1 slot="header">IPL Auction</h1>
+      <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    </card>
+    <card
+      data-image="https://images.unsplash.com/photo-1479621051492-5a6f9bd9e51a?dpr=2&auto=compress,format&fit=crop&w=1199&h=811&q=80&cs=tinysrgb&crop=">
+      <h1 slot="header">Tech-Talks</h1>
+      <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    </card>
+  </div>
+
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.min.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(function () {
+      var str = '#len'; //increment by 1 up to 1-nelemnts
+      $(document).ready(function () {
+        var i, stop;
+        i = 1;
+        stop = 4; //num elements
+        setInterval(function () {
+          if (i > stop) {
+            return;
+          }
+          $('#len' + (i++)).toggleClass('bounce');
+        }, 500)
+      });
+    });
+  </script>
+  <script>
+    var preloader = document.getElementById('loading');
+
+    function myFunction() {
+      setTimeout(removeLoader, 1000);
+    }
+    function removeLoader() {
+      preloader.style.display = 'none';
+    }
+  </script>
+</body>
+
+</html>
